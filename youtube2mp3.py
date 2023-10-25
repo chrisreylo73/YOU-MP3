@@ -1,4 +1,3 @@
-import time
 from pytube import YouTube
 from moviepy.editor import VideoFileClip
 import os
@@ -36,6 +35,7 @@ def browse_path():
 
 # Function to start the download process
 def start():
+    print("starting")
     youtube_url = urlEntry.get()
     output_audio_path = pathEntry.get()
     video_folder_path = "./Videos"
@@ -46,7 +46,7 @@ def start():
     extract_audio(f"{video_folder_path}/{videoTitle}.mp4", output_audio_path)
     delete_video(f"{video_folder_path}/{videoTitle}.mp4")
 
-if __name__ == "__main":
+if __name__ == "__main__":
     
     # GUI Interface 
     root = tk.Tk()
